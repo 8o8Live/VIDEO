@@ -1,0 +1,109 @@
+/* Hero Video */
+.outer.hero-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
+
+.video-container {
+  height: 550px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
+
+video {
+  object-fit: cover; /* Set the magic */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
+
+.video-container:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2); /* Corrected rgba syntax */
+  z-index: 1;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  padding: 0;
+  line-height: 1;
+  color: white;
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+  @media (min-width: 768px) {
+    font-size: 52px;
+  }
+}
+
+.desc {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.callout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  margin: auto;
+
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 0;
+  margin-top: 20px;
+  background-color: #82bb00;
+  padding: 15px 30px;
+  border-radius: 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+
+  @media (max-width: 767px) {
+    padding: 10px 20px;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #6e9e01;
+}
