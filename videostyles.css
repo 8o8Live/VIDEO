@@ -1,113 +1,151 @@
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
-    .outer.hero-video {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+.outer.hero-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-      @media (max-width: 767px) {
-        height: 325px;
-      }
-    }
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
 
-    .video-container {
-      height: 550px;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
+.video-container {
+  height: 550px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 
-      @media (max-width: 767px) {
-        height: 325px;
-      }
-    }
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
 
-    video {
-      object-fit: cover;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
+video {
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 
-      @media (max-width: 767px) {
-        height: 325px;
-      }
-    }
+  @media (max-width: 767px) {
+    height: 325px;
+  }
+}
 
-    .video-container:after {
-      content: '';
-      display: block;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+.video-container:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
 
-    h1 {
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-      padding: 0;
-      line-height: 1;
-      color: white;
+.callout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  margin: auto;
 
-      @media (max-width: 767px) {
-        font-size: 32px;
-      }
-      @media (min-width: 768px) {
-        font-size: 52px;
-      }
-    }
+  @media (max-width: 767px) {
+    width: 90%;
+  }
+}
 
-    .desc {
-      color: white;
-      font-weight: 400;
-      font-size: 18px;
-    }
+h1 {
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  padding: 0;
+  line-height: 1;
+  color: white;
 
-    .callout {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100%;
-      text-align: center;
-      position: relative;
-      z-index: 10;
-      width: 70%;
-      margin: auto;
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+  @media (min-width: 768px) {
+    font-size: 52px;
+  }
+}
 
-      @media (max-width: 767px) {
-        width: 90%;
-      }
-    }
+.desc {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
 
-    .button {
-      text-transform: uppercase;
-      background-color: transparent;
-      border-radius: 0;
-      margin-top: 20px;
-      background-color: #82bb00;
-      padding: 15px 30px;
-      border-radius: 0;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
+.button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 0;
+  margin-top: 20px;
+  background-color: #82bb00;
+  padding: 15px 30px;
+  border-radius: 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 
-      @media (max-width: 767px) {
-        padding: 10px 20px;
-      }
-    }
+  @media (max-width: 767px) {
+    padding: 10px 20px;
+  }
+}
 
-    .button:hover {
-      cursor: pointer;
-      background-color: #6e9e01;
-    }
+.button:hover {
+  cursor: pointer;
+  background-color: #6e9e01;
+}
+
+/* Additional Styles for Content Blocks */
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.content-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Center content vertically */
+}
+
+.content-item:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.text-container {
+  padding: 20px;
+  text-align: center; /* Center text horizontally */
+}
+
+h2 {
+  margin-top: 0;
+}
